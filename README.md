@@ -50,7 +50,7 @@ database: {
 
 ```
 	charset: 'UTF8_GENERAL_CI'
-``
+```
 
 3 主页显示很慢,界面很久才展示出来
 答:  还是因为google背墙乐，主题中引用了一个谷歌字体，删掉
