@@ -3,7 +3,7 @@
 #### Quickstart:
 
 在控制台，切换到工作目录，执行以下命令
-
+1. `git clone https://github.com/ghostchina/Ghost.zh.git`  
 1. `npm install -g grunt-cli`
 1. `npm install`
 1. `grunt init` (and `grunt prod` if you want to run Ghost in production mode)
