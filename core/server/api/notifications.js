@@ -121,7 +121,7 @@ notifications = {
             notificationCounter = 0;
             return when(notificationsStore);
         }, function () {
-            return when.reject(new errors.NoPermissionError('你没有权限去删掉通知.'));
+            return when.reject(new errors.NoPermissionError('你没有权限删掉通知.'));
         });
     }
 };
