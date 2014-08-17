@@ -173,9 +173,9 @@ function initNotifications() {
         api.notifications.add({ notifications: [{
             type: 'info',
             message: [
-                "Ghost is attempting to use your server's <b>sendmail</b> to send e-mail.",
-                "It is recommended that you explicitly configure an e-mail service,",
-                "See <a href=\"http://support.ghost.org/mail\">http://support.ghost.org/mail</a> for instructions"
+                "Ghost 正在尝试使用你的服务器发送一封邮件.",
+                "它正在提醒您去配置邮件服务,",
+                "查看 <a href=\"http://support.ghost.org/mail\">http://support.ghost.org/mail</a>的使用说明"
             ].join(' ')
         }] }, {context: {internal: true}});
     }
@@ -183,8 +183,8 @@ function initNotifications() {
         api.notifications.add({ notifications: [{
             type: 'warn',
             message: [
-                "Ghost is currently unable to send e-mail.",
-                "See <a href=\"http://support.ghost.org/mail\">http://support.ghost.org/mail</a> for instructions"
+                "Ghost 当前还不能发送邮件.配置不正确",
+                "查看 <a href=\"http://support.ghost.org/mail\">http://support.ghost.org/mail</a>的使用说明"
             ].join(' ')
         }] }, {context: {internal: true}});
     }
