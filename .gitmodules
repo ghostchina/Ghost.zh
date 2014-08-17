@@ -1,1 +1,4 @@
 
+[submodule "content/themes/casper"]
+	path = content/themes/casper
+	url = https://github.com/ghostchina/Casper.zh
