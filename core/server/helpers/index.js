@@ -32,6 +32,8 @@ var downsize        = require('downsize'),
         ]
     };
 
+    moment.lang('zh-cn');
+
 if (!isProduction) {
     hbs.handlebars.logger.level = 0;
 }
