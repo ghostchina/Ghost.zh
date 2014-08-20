@@ -22,7 +22,7 @@ database: {
                 user     : 'yourname',
                 password : 'password',
                 database : 'ghost_blog',
-                charset  : 'UTF8_GENERAL_CI'
+                charset  : 'utf8'
             }
         },
 
