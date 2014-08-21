@@ -31,7 +31,7 @@ database: {
 
 ### 常见问题
 
-#### 1  npm start ghost 正常运行以后，访问/ghost 无法进入后台，显示的状态码为302  
+#### 1  npm start ghost 正常运行以后，访问/ghost， 无法进入后台，web端显示的状态码为302  
 答： 进入ghost 后台系统会自动检测更新，是否有新版本,但是国内无法访问这个地址 update.ghost.org.
 
 解决办法:替换 /core/server/update-check.js  190行
@@ -45,6 +45,24 @@ database: {
     //return updateCheckRequest().then(updateCheckResponse).otherwise(updateCheckError);
     deferred.resolve();
 ```  
+或者，
+
+在config.js中加入,    updateCheck: false,
+看起来像这样：
+
+
+```
+development: {
+       updateCheck: false,
+        database: {
+            client: 'mysql',
+            connection: {
+                host     : '127.0.0.1',
+                ......
+	
+```
+
+
 
 #### 2 数据库中文乱码   
 修改confi.js中database的字符集设置
