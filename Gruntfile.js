@@ -19,13 +19,22 @@ var path           = require('path'),
     // This is read from the `.npmignore` file and all patterns are inverted as the `.npmignore`
     // file defines what to ignore, whereas we want to define what to include.
     buildGlob = (function () {
+        var patterns,
+            pkgs;
+
+        pkgs = _.keys(JSON.parse(fs.readFileSync('package.json', {encoding: 'utf8'})).dependencies).map(function(pkg){
+            return 'node_modules/' + pkg + '/**';
+        });
+
         /*jslint stupid:true */
-        return fs.readFileSync('.npmignore', {encoding: 'utf8'}).split('\n').map(function (pattern) {
+        patterns = fs.readFileSync('.npmignore', {encoding: 'utf8'}).split('\n').map(function (pattern) {
             if (pattern[0] === '!') {
                 return pattern.substr(1);
             }
             return '!' + pattern;
         });
+
+        return patterns.concat(pkgs);
     }()),
 
     // ## Grunt configuration
