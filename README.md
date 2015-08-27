@@ -1,3 +1,6 @@
+> 此项目已经废弃！！！   
+请转战新地址： [https://github.com/ghostchina/Ghost-zh](https://github.com/ghostchina/Ghost-zh)
+
 # [Ghost](https://github.com/TryGhost/Ghost) [![Build Status](https://travis-ci.org/TryGhost/Ghost.svg?branch=master)](https://travis-ci.org/TryGhost/Ghost)
 
 #### Quickstart:
